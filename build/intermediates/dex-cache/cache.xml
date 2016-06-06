@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\xhrong\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="E:\GitHubProject\ScanDemoExample\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-21.0.3_94979c836d832e01bbaef07a021e380313df2817\classes.dex" />
+    </item>
+    <item
+        jar="E:\GitHubProject\ScanDemoExample\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="E:\GitHubProject\ScanDemoExample\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-21.0.3_6701e8f420741028d1007668f6ebfac063b034b8\classes.dex" />
+    </item>
+    <item
+        jar="E:\GitHubProject\ScanDemoExample\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="E:\GitHubProject\ScanDemoExample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-21.0.3_1977d7159ae954ffe037980ad4232dd8ebef6112\classes.dex" />
+    </item>
+    <item
+        jar="E:\GitHubProject\ScanDemoExample\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="E:\GitHubProject\ScanDemoExample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-21.0.3_0ddab60ed071d04269cc24d25a42e7c7a810c7a9\classes.dex" />
+    </item>
+    <item
+        jar="E:\GitHubProject\ScanDemoExample\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="f09bd0449cae78d76fe46ccc791102d2e3aaf572">
+        <dex dex="E:\GitHubProject\ScanDemoExample\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_a74ce61a7783800baba53cbeb13c79c118d0149f\classes.dex" />
+    </item>
+    <item
+        jar="E:\GitHubProject\ScanDemoExample\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="3a7bfd82116562ee386e9c2bcd17645a3dfbb803">
+        <dex dex="E:\GitHubProject\ScanDemoExample\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_8076a9b2193671925331a780d991d241b115a5a5\classes.dex" />
+    </item>
+
+</items>
