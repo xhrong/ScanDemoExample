@@ -293,7 +293,7 @@ JNIEXPORT jobject JNICALL Java_com_scanlibrary_ScanActivity_getMagicColorBitmap
 }
 
 JNIEXPORT jobject JNICALL Java_com_scanlibrary_ScanActivity_getBWBitmap
-(JNIEnv *env, jobject thiz,jobject bitmap)
+(JNIEnv *env, jobject thiz,jobject bitmap,jint i,jint j,jint k)
 {
     __android_log_print(ANDROID_LOG_VERBOSE, APPNAME, "Scaning getBWBitmap");
     int ret;
@@ -325,11 +325,12 @@ JNIEXPORT jobject JNICALL Java_com_scanlibrary_ScanActivity_getBWBitmap
 
    // threshold(dst,dst,0,255, THRESH_TOZERO);
 	
-	int blockSize = 25;  
-    int constValue = 10;  
-
-    cv::adaptiveThreshold(dst, dst, 255, CV_ADAPTIVE_THRESH_MEAN_C, CV_THRESH_BINARY, blockSize, constValue);  
-  
+	int blockSize = i;  
+    int constValue = j;  
+	cv::adaptiveThreshold(dst, dst, 255, CV_ADAPTIVE_THRESH_MEAN_C, CV_THRESH_BINARY, blockSize, constValue);  
+	
+	cv::GaussianBlur(dst, dst, Size(1,1 ), 0, 0);
+   
     //get source bitmap's config
     jclass java_bitmap_class = (jclass)env->FindClass("android/graphics/Bitmap");
     jmethodID mid = env->GetMethodID(java_bitmap_class, "getConfig", "()Landroid/graphics/Bitmap$Config;");

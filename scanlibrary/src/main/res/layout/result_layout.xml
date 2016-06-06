@@ -47,16 +47,32 @@
                 android:layout_weight="1"
                 android:text="B and W" />
 
+
+
             <SeekBar
                 android:id="@+id/seekBar"
                 android:max="100"
                 android:background="#232323"
-                android:layout_width="400dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+            <SeekBar
+                android:id="@+id/seekBar1"
+                android:max="100"
+                android:background="#232323"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+            <SeekBar
+                android:id="@+id/seekBar2"
+                android:max="10"
+                android:background="#232323"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content" />
         </LinearLayout>
-
-
     </HorizontalScrollView>
+
+
 
     <Button
         android:id="@+id/doneButton"

@@ -11,6 +11,7 @@ import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,10 @@ public class ResultFragment extends Fragment {
     private Button bwButton;
     private Bitmap transformed;
     private SeekBar seekBar;
+    private SeekBar seekBar1;
+    private SeekBar seekBar2;
+    private int i,j,k;
+
 
     public ResultFragment() {
     }
@@ -63,14 +68,75 @@ public class ResultFragment extends Fragment {
 
         seekBar = (SeekBar) view.findViewById(R.id.seekBar);
 
-        original = BitmapFactory.decodeFile("/sdcard/DCIM/Camera/IMG_20160606_084859.jpg");
+        seekBar1 = (SeekBar) view.findViewById(R.id.seekBar1);
+        seekBar2 = (SeekBar) view.findViewById(R.id.seekBar2);
+
+      //  original = BitmapFactory.decodeFile("/sdcard/DCIM/Camera/IMG_20160606_084859.jpg");
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if(k<3 || k%2==0) return;
+                 i = progress * 255 / 100;
 
-                transformed = ((ScanActivity) getActivity()).getBWBitmap(original, progress * 255 / 100);
+                if (i % 2 == 1) {
+
+                } else {
+                    i++;
+                }
+                transformed = ((ScanActivity) getActivity()).getBWBitmap(original, i,j,k);
                 scannedImageView.setImageBitmap(transformed);
+
+                Log.e("EEEEEEEIIIII", "" + i);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        seekBar1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if(k<3 || k%2==0) return;
+               j = progress * 50 / 100;
+
+
+                transformed = ((ScanActivity) getActivity()).getBWBitmap(original, i,j,k);
+                scannedImageView.setImageBitmap(transformed);
+
+                Log.e("EEEEEEEJJJJJ", "" + j);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        seekBar2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+                k = progress;
+
+                if(k<3 || k%2==0) return;
+
+                transformed = ((ScanActivity) getActivity()).getBWBitmap(original, i,j,k);
+                scannedImageView.setImageBitmap(transformed);
+
+                Log.e("EEEEEEEKKKKKK", "" + k);
             }
 
             @Override
@@ -127,8 +193,8 @@ public class ResultFragment extends Fragment {
         @Override
         public void onClick(View v) {
 
-            original = BitmapFactory.decodeFile("/sdcard/DCIM/Camera/IMG_20160606_084859.jpg");
-            transformed = ((ScanActivity) getActivity()).getBWBitmap(original, 0);
+            //  original = BitmapFactory.decodeFile("/sdcard/DCIM/Camera/IMG_20160606_084859.jpg");
+            transformed = ((ScanActivity) getActivity()).getBWBitmap(original, 25,20,5);
             //      transformed = ((ScanActivity) getActivity()).getBWBitmap(original,5,111,10);
             //  transformed = gray2Binary(bitmap2Gray(original));
             scannedImageView.setImageBitmap(transformed);

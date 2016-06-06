@@ -70,7 +70,7 @@ JNIEXPORT jfloatArray JNICALL Java_com_scanlibrary_ScanActivity_getPoints
 (JNIEnv *, jobject, jobject);
 
 JNIEXPORT jobject JNICALL Java_com_scanlibrary_ScanActivity_getBWBitmap
-(JNIEnv *, jobject, jobject);
+(JNIEnv *, jobject, jobject,jint,jint,jint);
 
 JNIEXPORT jobject JNICALL Java_com_scanlibrary_ScanActivity_getMagicColorBitmap
 (JNIEnv *, jobject, jobject);
